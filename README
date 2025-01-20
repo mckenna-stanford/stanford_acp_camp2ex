@@ -10,6 +10,8 @@ The directories here contain the input data needed for setting up simulations, s
 
 (5) nuwrf: The namelist.input and namelist.wps files used to run the NU-WRF mesoscale simulation for which large-scale thermodynamic and vertical motion conditions were harvested to force DHARMA simulations. 
 
-3D output files from the CNTL and BIN_TURB_10X runs are available on NASA Center for Climate Simulation data portal website: https://portal.nccs.nasa.gov/datashare/giss-camp2ex/. These may be removed when the data portal license expires. If so, or if users desire any of the other simulations used in the manuscript, full 3D files can be made available upon request.
+3D output files from the CNTL and BIN_TURB_10X runs are available on NASA Center for Climate Simulation (NCCS) data portal website: https://portal.nccs.nasa.gov/datashare/giss-camp2ex/. These may be removed when the data portal license expires. If so, or if users desire any of the other simulations used in the manuscript, full 3D files can be made available upon request.
+
+NOTE: the NetCDF files provied in (2), (3), (4), and (5) above may need to removed in the future to conserve space on this Github repo. They will be available on the NCCS data portal until the license expires. If these files expire and are desired by users, please contact the lead author (contact info below).
 
 Contact McKenna W. Stanford at mckenna.stanford@pnnl.gov for further information or requests.
