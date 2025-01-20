@@ -1,0 +1,185 @@
+ &time_control
+ run_days                            = 0,
+ run_hours                           = 24,
+ run_minutes                         = 0,
+ run_seconds                         = 0,
+ START_YEAR = 2019, 2019, 2019,
+ START_MONTH = 09,   09,   09,
+ START_DAY = 24,   24,   25,
+ START_HOUR = 12,   18,   00,
+ START_MINUTE = 00,   00,   00,
+ START_SECOND = 00,   00,   00,
+ END_YEAR = 2019, 2019, 2019,
+ END_MONTH = 09,   09,   09,
+ END_DAY = 25,   25,   25,
+ END_HOUR = 09,   09,   09,
+ END_MINUTE = 00,   00,   00,
+ END_SECOND = 00,   00,   00,
+ interval_seconds                    = 21600
+ INPUT_FROM_FILE = .true.,.true.,.true.,
+ HISTORY_INTERVAL = 15, 15,15,
+ FRAMES_PER_OUTFILE = 1, 1,1,
+ RESTART = .false.,
+ restart_interval                    = 180,
+ io_form_history                     = 2
+ io_form_restart                     = 2
+ io_form_input                       = 2
+ io_form_boundary                    = 2
+ debug_level                         = 0
+ write_hist_at_0h_rst                = .false.,
+ ignore_iofields_warning = .true.,
+ iofields_filename = "remove_vars_d01.txt", "remove_vars_d02.txt","remove_vars_d03.txt"
+
+
+ /
+
+ &domains
+ TIME_STEP = 9,
+ time_step_fract_num                 = 0,
+ time_step_fract_den                 = 1,
+ max_dom = 3,
+ s_we           =   1,  1, 1,
+ e_we           =  801,  801, 802,
+ s_sn           =   1,  1, 1,
+ e_sn           =  801,  801, 802,
+ s_vert         =   1,  1,  1,
+ e_vert                              =  151,     151,    151,
+ eta_levels = 1.0, 0.997281524, 0.9935791871342282, 0.9898058189597315, 0.9859249439395974, 0.9818983266644296, 0.9777978532147651, 0.9735455636577182, 0.9691781317852349, 0.9647311470402684, 0.9600862493020134, 0.9553592320134228, 0.9505055982147651, 0.9454845327919463, 0.9403772972483222, 0.9350899039597316, 0.9296703382416107, 0.9241553146577182, 0.9184107609798657, 0.9125698876174496, 0.9065777584295301, 0.9003906566241611, 0.894101979295302, 0.887598142261745, 0.8809419465906041, 0.8741707632684564, 0.8671337767248323, 0.8599847809194631, 0.8526567909932886, 0.8451075769798658, 0.8374419549932886, 0.8295274627516778, 0.8214435590469799, 0.8132260809194631, 0.804713069033557, 0.796075782, 0.78723669, 0.7781602716912751, 0.7689580209530201, 0.7594857381409396, 0.7498372089127517, 0.7400435355771813, 0.7299442087114094, 0.7197164360805369, 0.7092769189395973, 0.6985988099865772, 0.6877930975369128, 0.6767128309932886, 0.6654629647852349, 0.6540672428657719, 0.6423813549261745, 0.630573734966443, 0.6185626738657718, 0.6063317372751679, 0.5939822917583893, 0.5813785578859061, 0.5686288730738255, 0.5557481302751678, 0.54261611452349, 0.5294028316912752, 0.5160618381342282, 0.5028539133221477, 0.48974828242281876, 0.4770202637248323, 0.46449135772483224, 0.45214911987919465, 0.4401480081409396, 0.4282921891946308, 0.41668616181879203, 0.40533138315436246, 0.39411655295302017, 0.38321019141610735, 0.37247446858389255, 0.3619057538456376, 0.3516354663020135, 0.34149449444295304, 0.33157949355704697, 0.3218845582416107, 0.3123140990201343, 0.303020640228188, 0.29387522116778525, 0.2848810600939597, 0.2761478036711409, 0.2675290310067115, 0.25911326814093966, 0.2508902827248322, 0.242778259147651, 0.23491708711409393, 0.22718594152348998, 0.21959349080536916, 0.21223254314765103, 0.20497437675167784, 0.19790104267114092, 0.190997087261745, 0.18419216246979866, 0.1776129767114094, 0.17114670263087248, 0.1648061711006712, 0.15866813630872487, 0.1526207699932886, 0.14673842324832218, 0.14100176193959732, 0.1353516001543625, 0.12989946204697983, 0.12454219723489929, 0.11929525020805376, 0.11422005351677858, 0.10922372985234903, 0.10437392653020136, 0.09965374575167786, 0.09501218210738256, 0.09055750270469798, 0.0861907501610738, 0.0819307659463087, 0.07783099373154359, 0.0738047781073826, 0.06991601993288594, 0.06614158954362419, 0.06243759855033559, 0.05890179784563759, 0.05544362224832215, 0.052083898006711406, 0.04887048920134227, 0.045724995308724814, 0.04270787370469796, 0.03979132651006714, 0.03693752667785238, 0.034227403691275186, 0.031576324194630884, 0.029003477322147656, 0.02652701377852349, 0.024095668429530197, 0.021750347617449654, 0.01947939370469797, 0.017255837872483252, 0.015147010442953045, 0.013085285590604045, 0.011088779691275183, 0.009178167053691283, 0.007553406979865773, 0.006901881436241611, 0.006250356275167784, 0.005598831355704695, 0.004947306436241606, 0.004295781261744975, 0.0036442557181208127, 0.002992730677852355, 0.002341205758389266, 0.0016896808389261775, 0.0008928449395973174, 0.0,
+
+ num_metgrid_levels = 34,
+ num_metgrid_soil_levels             = 4,
+ p_top_requested                     = 5000, 
+ dx             = 3000,  600, 200,
+ dy             = 3000,  600, 200,
+ grid_id        = 1,  2,  3,
+ parent_id      = 0,  1, 2,
+ i_parent_start = 1,  360, 180, 
+ j_parent_start = 1,  330, 150,
+ parent_grid_ratio = 1,  5, 3,
+ parent_time_step_ratio = 1,  6, 4,
+ feedback                            = 0,
+ smooth_option                       = 0,
+ sfcp_to_sfcp = .true.,
+ /
+
+ &physics
+ MP_PHYSICS = 18,     18, 18,
+ elec_physics                        = 1,
+!0: electrification (and charge arrays) turned off
+!1: electrification turned on with "1D" lightning scheme based on Ziegler and MacGorman (1994, JAS)
+!   only workss with mp_physics = 17 or 18, i.e., 2-moment NSSL schemes)
+
+ nssl_ipelec                         = 0, 3, 3,
+! NOTE: only set this to a nonzero value on the innermost domain
+!0, charging turned off (DEFAULT)
+!1, not used (reserved for future use)
+!2, non-inductive charging only
+!3, non-inductive + inductive charging
+
+ nssl_idischarge                     = 2,
+!0, no discharge
+!1, 1D discharge turned on (DEFAULT)
+!2, 3D discharge based on MacGorman et al. 2001 (MSZ)
+
+ nssl_iscreen                        = 0,
+!0, no screening layer (DEFAULT)
+!1, screening layer scheme of Ziegler et al. (1991, JGR)
+!2, screening layer only applied at cloud top (seems to be better for storm complexes and large storms)
+
+ nssl_ibrkd                          = 4,
+!breakdown electric field profile to initiate lightning
+!1, constant profile with height with value set by nssl_ecrit
+!2 to 5, variants of vertical Ecrit profile of Dwyer (2003, GRL) - '4' is recommended (DEFAULT is 4).
+
+ nssl_isaund                         = 12,
+!Calls the appropriate version of the UMIST (e.g., Saunders et al. 1991 scheme)
+! -5 : Saunders etal 1991 (following Helsdon et al. 2001, but use normal charging instead of 'anomalous' zones)
+!  0 : Saunders 1991 (modified as in Wojcik 1994)
+!  2 : RR scheme ( no extra factor ) (Mansell et al. 2005, JGR)
+!  4 : Saunders and Peck Scheme ( no extra factor ) (Mansell et al. 2005, JGR)
+!  9 : Saunders and Peck Scheme ( no extra factor, cutoff at -32.47 as orig eq. from sp98 ) (Mansell et al. 2010, JAS)
+! 10 : Brooks et al. RARcrit for T > -15 using saund2 (otherwise same as isaund=2) (set rarfac to negative in saund2)
+! 11 : Brooks et al. RARcrit for T > -15 using saund6 (otherwise same as isaund=4)
+! 12 : Brooks et al. RARcrit for T > -15 using saund6 (otherwise same as isaund=9) (DEFAULT)
+
+ nssl_lightrad                       = 12000,
+!radius (m) of discharge cylinder for 1-D discharge scheme
+
+ nssl_disfrac                        = 0.3,
+!nominal fraction of charge removed per discharge
+
+ nssl_ecrit                          = 120000,
+! breakdown electric field (Volts/m) to initiate lightning (i.e., constant value with height). (for nssl_ibrkd=1)
+!Triple-mode homogeneous domain CCN set up (see details in Registry.EM_COMMON)
+ ac_only                             = .false.,
+ arg_para                            = .true.,
+ dm15_para                           = .false.,
+ nu_kappa                            = 0.4,
+ ac_kappa                            = 0.4,
+ co_kappa                            = 0.4,
+ z_pbl_cn                            = 1500.,
+ z_inp                               = 4000.,
+ ash                                 = 800.,
+ cn_nu_land                          = 1.07e7,
+ cn_ac_land                          = 3.14e8,
+ cn_co_land                          = 5.58e8,
+ cn_lo_ratio                         = 1.,
+ inp_land                            = 5.e6,
+ inp_lo_ratio                        = 0.1,
+
+
+
+ NUM_LAND_CAT = 21,
+ ra_lw_physics                       = 57,   57, 57,
+ ra_sw_physics                       = 57,   57, 57,
+ radt                                = 3,    1, 1,
+ sf_sfclay_physics                   = 5,    5, 5,
+ sf_surface_physics                  = 4,    4, 4,
+ bl_pbl_physics                      = 5,    5, 0,
+ bl_mynn_tkebudget                   = 1,1,0,
+ sf_urban_physics                    = 1,    1, 1,
+ bldt                                = 0,    0, 0,
+ cu_physics                          = 0,    0, 0,
+ surface_input_source                = 1,
+ /
+
+ &fdda
+ /
+ &dynamics
+ w_damping                           = 0,
+ diff_opt                            = 1, 1, 1,
+ km_opt                              = 4, 4, 2,
+ diff_6th_opt                        = 2, 2, 2,
+ diff_6th_factor                     = 0.12, 0.12, 0.12,
+ base_temp                           = 290.,
+ damp_opt                            = 0,
+ zdamp                               = 5000., 5000., 5000.,
+ dampcoef                            = 0.02,  0.02, 0.02,
+ khdif                               = 0,    0, 0,
+ kvdif                               = 0,    0, 0,
+ non_hydrostatic                     = .true., .true.,.true.,
+ moist_adv_opt                       = 1,    1, 1,
+ momentum_adv_opt                    = 4,    4, 4,
+ scalar_adv_opt                      = 1,    1, 1,
+ gwd_opt                             = 0
+ epssm                               = 0.1, 0.5, 0.5,
+ tracer_opt                          = 2, 2, 2,
+ tracer_time                         = 1.,1., 1.,
+ /
+
+ &bdy_control
+ SPEC_BDY_WIDTH = 5,
+ SPEC_ZONE = 1,
+ RELAX_ZONE = 4,
+ SPECIFIED = .true., .false., .false.,
+ NESTED = .false., .true., .true.,
+ /
+
+ &grib2
+ /
+
+ &namelist_quilt
+ nio_tasks_per_group = 0,
+ nio_groups = 1,
+ /
+

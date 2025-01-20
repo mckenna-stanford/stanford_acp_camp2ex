@@ -1,0 +1,15 @@
+The directories here contain the input data needed for setting up simulations, summarized information and data on all simulations (including sensitivity tests), thermal data, and all scripts used for plotting figures in the manuscript. The directories are outlined below with a description of their contents:
+
+(1) python_plotting_scripts: All python scripts (as Jupyter Notebooks and one Python file) used for plotting the figures in the manuscript. Also included are two scripts used to calculate extinction-weighted cloud-top variables.
+
+(2) input_files: NetCDF files containing the sounding input (includes temperature, pressure, water vapor mixing ratio, horizontal winds, and height), the large-scale vertical motion input, and the aerosol input (trimodal, lognormal distributions constructed with height-varying aerosol number concentration and height-invariant geometric mean particle diameter, geometric standard deviation, and hygroscopicity parameter).
+
+(3) dharma_mean_sounding_time_height_profiles: NetCDF files for all simulations (including sensitivity runs) containing domain-mean/maximum time-height series or scalars of various thermodynamic, kinematic, and microphysical quantities.
+
+(4) thermals: NetCDF files containing statistics of all tracked thermals for the two simulations for which this was performed (CNTL and FIXED_AERO_NO_AC).
+
+(5) nuwrf: The namelist.input and namelist.wps files used to run the NU-WRF mesoscale simulation for which large-scale thermodynamic and vertical motion conditions were harvested to force DHARMA simulations. 
+
+3D output files from the CNTL and BIN_TURB_10X runs are available on NASA Center for Climate Simulation data portal website: https://portal.nccs.nasa.gov/datashare/giss-camp2ex/. These may be removed when the data portal license expires. If so, or if users desire any of the other simulations used in the manuscript, full 3D files can be made available upon request.
+
+Contact McKenna W. Stanford at mckenna.stanford@pnnl.gov for further information or requests.

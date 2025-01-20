@@ -1,0 +1,41 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 3,
+ start_date = '2019-09-24_12:00:00','2019-09-24_18:00:00','2019-09-25_00:00:00','2019-09-25_00:00:00'
+ end_date   = '2019-09-25_12:00:00','2019-09-25_12:00:00','2019-09-25_12:00:00','2019-09-25_12:00:00'
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+ debug_level = 100,
+/
+
+&geogrid
+ parent_id         =   1,   1,   2,   3,
+ parent_grid_ratio =   1,   5,   3,   5,
+ i_parent_start    =   1, 360, 233, 133,
+ j_parent_start    =   1, 330, 200, 133,
+ s_we              =   1,   1,   1, 1,
+ e_we              = 801, 701, 601, 201,
+ s_sn              =   1,   1,   1, 1,
+ e_sn              = 801, 601, 601, 201,
+ geog_data_res     = 'modis_lakes+30s','modis_lakes+30s','modis_lakes+30s',
+ dx        = 3000
+ dy        = 3000
+ map_proj  = 'mercator',
+ ref_lat   =   14.5,
+ ref_lon   =  124.0,
+ truelat1  =   0.0,
+ truelat2  =   45.0,
+ stand_lon =  124.0,
+ geog_data_path = '/discover/nobackup/projects/nu-wrf/cases/geog'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix     = 'FNL',
+/
+
+&metgrid
+ fg_name         = 'FNL',
+ io_form_metgrid = 2, 
+/
+
